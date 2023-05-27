@@ -10,9 +10,10 @@ app = Flask(__name__, static_folder="static")
 
 app.secret_key = "secret key"
 
-# Define the upload folder to save images uploaded by the user.
-app.config['UPLOAD_FOLDER'] = 'static/images/'
+UPLOAD_FOLDER = 'static/images/'
 
+# Define the upload folder to save images uploaded by the user.
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def index():
